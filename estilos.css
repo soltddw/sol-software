@@ -1,0 +1,339 @@
+/* ==========================================================
+   PALETA DE COLORES VERDE ESMERALDA / MENTA & TIPOGRAFÍA MONO
+   ========================================================== */
+:root {
+    --bg-page: #0f1715;           /* Fondo oscuro esmeralda/carbón */
+    --surface-card: #16221f;      /* Tarjetas verde oscuro */
+    --surface-hover: #1e2e2a;     /* Hover para elementos interactivos */
+    --primary-mint: #10b981;      /* Verde menta brillante */
+    --emerald-dark: #047857;      /* Verde esmeralda intenso */
+    --emerald-light: #a7f3d0;     /* Menta claro para texto destacado */
+    --border-color: #064e3b;      /* Bordes verdes definidos */
+    --text-heading: #ecfdf5;      /* Blanco menta para títulos */
+    --text-body: #d1fae5;         /* Menta suave para texto */
+    --text-muted: #6ee7b7;        /* Verde medio para etiquetas */
+
+    /* Tipografías */
+    --font-code: 'Fira Code', monospace;
+    --font-main: 'Space Grotesk', sans-serif;
+
+    /* Sombras y transiciones */
+    --shadow-emerald: 0 10px 30px -5px rgba(16, 185, 129, 0.15);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-page);
+    color: var(--text-body);
+    line-height: 1.7;
+}
+
+/* ==========================================================
+   HEADER / HERO ESMERALDA
+   ========================================================== */
+.header-emerald {
+    background: linear-gradient(135deg, #022c22 0%, #047857 60%, #10b981 100%);
+    color: #ffffff;
+    padding: 4rem 1.5rem 3rem;
+    border-bottom: 3px solid var(--primary-mint);
+}
+
+.header-container {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.code-tag {
+    font-family: var(--font-code);
+    background: rgba(0, 0, 0, 0.4);
+    color: var(--primary-mint);
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--primary-mint);
+}
+
+.title {
+    font-family: var(--font-main);
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--emerald-light);
+    margin-bottom: 2rem;
+}
+
+.student-card {
+    background: rgba(15, 23, 21, 0.6);
+    border: 1px solid var(--primary-mint);
+    border-radius: 12px;
+    padding: 1.2rem 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 1.25rem;
+    text-align: left;
+}
+
+.avatar-badge {
+    background: var(--primary-mint);
+    color: var(--bg-page);
+    font-family: var(--font-code);
+    font-weight: 700;
+    font-size: 1.3rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.student-details .name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-heading);
+}
+
+.student-details .info {
+    font-size: 0.88rem;
+    color: var(--emerald-light);
+}
+
+/* ==========================================================
+   NAVEGACIÓN ESTILO TERMINAL
+   ========================================================== */
+.emerald-nav {
+    background: var(--surface-card);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-links {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    font-family: var(--font-code);
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    background: var(--primary-mint);
+    color: var(--bg-page);
+}
+
+/* ==========================================================
+   CONTENEDOR DE TARJETAS
+   ========================================================== */
+.content-wrapper {
+    max-width: 850px;
+    margin: 2.5rem auto;
+    padding: 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-box {
+    background: var(--surface-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--shadow-emerald);
+    transition: var(--transition);
+}
+
+.card-box:hover {
+    border-color: var(--primary-mint);
+    transform: translateY(-3px);
+}
+
+.card-label {
+    font-family: var(--font-code);
+    color: var(--primary-mint);
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-box h2 {
+    color: var(--text-heading);
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Estilo para viñetas personalizadas */
+.bullet-list-custom {
+    list-style: none;
+    padding-left: 0;
+}
+
+.bullet-list-custom li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.96rem;
+}
+
+.bullet-list-custom li::before {
+    content: ">";
+    font-family: var(--font-code);
+    color: var(--primary-mint);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* ==========================================================
+   GRID DE PILARES CON VIÑETAS
+   ========================================================== */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+}
+
+.grid-item {
+    background: var(--bg-page);
+    border: 1px solid var(--border-color);
+    padding: 1.25rem;
+    border-radius: 12px;
+}
+
+.item-icon {
+    font-family: var(--font-code);
+    color: var(--primary-mint);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.grid-item h3 {
+    color: var(--text-heading);
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+}
+
+.item-bullets {
+    list-style: disc;
+    padding-left: 1.2rem;
+    font-size: 0.88rem;
+}
+
+.item-bullets li {
+    margin-bottom: 0.4rem;
+}
+
+/* ==========================================================
+   CUESTIONARIO ESTILO TARJETAS
+   ========================================================== */
+.qna-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.qna-card {
+    background: var(--bg-page);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.25rem;
+    display: flex;
+    gap: 1.25rem;
+}
+
+.qna-num {
+    font-family: var(--font-code);
+    background: var(--border-color);
+    color: var(--primary-mint);
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    height: fit-content;
+}
+
+.qna-body h3 {
+    color: var(--text-heading);
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+}
+
+/* ==========================================================
+   FUENTES Y FOOTER
+   ========================================================== */
+.sources-list {
+    list-style: none;
+}
+
+.sources-list li {
+    margin-bottom: 0.5rem;
+}
+
+.sources-list a {
+    color: var(--primary-mint);
+    text-decoration: none;
+    font-family: var(--font-code);
+    font-size: 0.9rem;
+}
+
+.sources-list a:hover {
+    text-decoration: underline;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background: var(--surface-card);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-family: var(--font-code);
+}
+
+/* Adaptabilidad para móviles */
+@media (max-width: 600px) {
+    .title {
+        font-size: 1.8rem;
+    }
+    
+    .student-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .qna-card {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
